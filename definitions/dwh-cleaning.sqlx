@@ -1,0 +1,10 @@
+config {
+  type: "table"
+}
+
+SELECT
+  *
+FROM
+  `showroom-273011.store.superstore_analyze`
+WHERE
+  order_date IS NOT NULL 

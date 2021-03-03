@@ -1,0 +1,12 @@
+config {
+  type: "table",
+  dependencies: ["dwh-cleaning"],  
+  tag: ["datamart"]
+}
+
+SELECT
+  	Country, COUNT(Product_Name) as Country_count
+FROM
+  ${ref('dwh-cleaning')}
+GROUP BY 
+  	Country
